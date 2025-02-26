@@ -3,9 +3,11 @@ import React from 'react';
 import { useTheme } from 'next-themes';
 import { Moon, Sun, Trophy, Users, Zap, Gamepad, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const Index = () => {
   const { theme, setTheme } = useTheme();
+  const navigate = useNavigate();
 
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
@@ -84,6 +86,7 @@ const Index = () => {
         <motion.button
           {...fadeInUp}
           transition={{ delay: 0.4 }}
+          onClick={() => navigate('/auth/login')}
           className="group flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-full text-lg font-semibold hover:scale-105 transition-transform"
         >
           Start Playing
