@@ -4,7 +4,7 @@ import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   Home, LayoutDashboard, User, Trophy, 
-  Settings, Gamepad, LogOut, Sun, Moon, Bell
+  Settings, Gamepad, LogOut, Sun, Moon, Bell, MessageCircle
 } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
@@ -28,6 +28,7 @@ const Layout = () => {
   const navItems = [
     { icon: <LayoutDashboard size={20} />, label: 'Dashboard', path: '/dashboard' },
     { icon: <Gamepad size={20} />, label: 'Play', path: '/game' },
+    { icon: <MessageCircle size={20} />, label: 'Chat', path: '/chat' },
     { icon: <Trophy size={20} />, label: 'Leaderboard', path: '/leaderboard' },
     { icon: <User size={20} />, label: 'Profile', path: '/profile' },
     { icon: <Settings size={20} />, label: 'Settings', path: '/settings' },
