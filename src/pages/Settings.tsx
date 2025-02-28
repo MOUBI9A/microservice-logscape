@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Bell, Shield, User, Gamepad, Palette, ArrowLeft, CheckCircle2, Volume2, Monitor } from 'lucide-react';
+import { Bell, Shield, User, Gamepad, Palette, ArrowLeft, CheckCircle2, Volume2, Display } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -333,7 +333,7 @@ const Settings = () => {
                     </div>
 
                     <div className="flex items-center gap-4">
-                      <Monitor className="h-5 w-5 text-muted-foreground" />
+                      <Display className="h-5 w-5 text-muted-foreground" />
                       <div className="flex-1">
                         <div className="font-medium">Brightness</div>
                         <input type="range" className="w-full accent-primary" defaultValue="75" />
