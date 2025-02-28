@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { MessageCircle, Send, Users, ChevronRight, Clock, X } from 'lucide-react';
@@ -16,7 +15,7 @@ const mockMessages = [
   { id: 1, sender: 'Player123', content: 'Hey everyone! Anyone up for a game?', time: '2 min ago', avatar: '/placeholder.svg' },
   { id: 2, sender: 'PongMaster', content: 'I just beat the expert AI! So pumped!', time: '5 min ago', avatar: '/placeholder.svg' },
   { id: 3, sender: 'GameNinja', content: 'What arena are you all playing in? The neon one is my favorite.', time: '10 min ago', avatar: '/placeholder.svg' },
-  { id: 4, sender: 'You', content: 'I'll be online for the next hour if anyone wants to play.', time: '12 min ago', avatar: '/placeholder.svg' },
+  { id: 4, sender: 'You', content: "I'll be online for the next hour if anyone wants to play.", time: '12 min ago', avatar: '/placeholder.svg' },
   { id: 5, sender: 'PaddleQueen', content: 'Just reached level 10! The ice arena is super challenging.', time: '15 min ago', avatar: '/placeholder.svg' },
   { id: 6, sender: 'SpeedPong', content: 'Anyone know when the next tournament is?', time: '20 min ago', avatar: '/placeholder.svg' },
 ];
