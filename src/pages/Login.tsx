@@ -1,8 +1,8 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Github } from 'lucide-react';
+import { Github, UserPlus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
@@ -13,11 +13,24 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { useToast } from '@/components/ui/use-toast';
 
 const Login = () => {
+  const navigate = useNavigate();
+  const { toast } = useToast();
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Form submission will be implemented later
+  };
+
+  const handleGuestLogin = () => {
+    toast({
+      title: "Logged in as Guest",
+      description: "You're now accessing the app with limited features.",
+      variant: "default"
+    });
+    navigate('/dashboard');
   };
 
   return (
@@ -50,9 +63,20 @@ const Login = () => {
                 required
               />
             </div>
-            <Button type="submit" className="w-full">
-              Sign In
-            </Button>
+            <div className="flex gap-2">
+              <Button type="submit" className="flex-1">
+                Sign In
+              </Button>
+              <Button 
+                type="button" 
+                variant="outline" 
+                className="flex-1" 
+                onClick={handleGuestLogin}
+              >
+                <UserPlus className="mr-2 h-4 w-4" />
+                Continue as Guest
+              </Button>
+            </div>
           </form>
 
           <div className="relative my-6">
